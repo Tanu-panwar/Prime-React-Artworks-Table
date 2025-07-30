@@ -60,7 +60,7 @@ npm run dev
 npm run build
 ```
 
-📁 Folder Structure
+## 📁 Folder Structure
 
 📦 src/
  ┣ 📂components/
