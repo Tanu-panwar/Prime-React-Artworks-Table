@@ -59,6 +59,9 @@ npm run dev
 #Build for Production
 npm run build
 ```
+
+📁 Folder Structure
+
 📦 src/
  ┣ 📂components/
  ┃ ┣ 📄 TableView.tsx
