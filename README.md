@@ -1,69 +1,70 @@
-# React + TypeScript + Vite
+# 🎨 PrimeReact Artworks Table
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React + TypeScript application built using **PrimeReact** DataTable component. This project demonstrates server-side pagination, row selection persistence, and a custom overlay-based selection panel.
 
-Currently, two official plugins are available:
+> ✅ Built with Vite + React + TypeScript  
+> ✅ Uses PrimeReact UI library  
+> ✅ Fully responsive and clean UI  
+> ✅ API: [Art Institute of Chicago](https://api.artic.edu/api/v1/artworks)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Server-side Pagination**  
+  Loads data page-by-page directly from the API.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Row Selection with Checkbox**  
+  Select individual rows or use a custom selector for bulk selection.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **Persistent Selection Across Pages**  
+  Keeps track of selected items even when navigating across pages.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **Custom Overlay Panel for Selection**  
+  Select N artworks quickly using a lightweight overlay with input.
+
+- **Responsive & Styled**  
+  Uses TailwindCSS and custom styles for smooth responsiveness.
+
+---
+
+## 📸 UI Preview
+
+> Add a screenshot here if you want (optional)
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React + TypeScript (via Vite)
+- **UI Components**: PrimeReact
+- **Styling**: TailwindCSS + Custom CSS
+- **API Source**: [https://api.artic.edu/api/v1/artworks](https://api.artic.edu/api/v1/artworks)
+
+---
+
+## 📦 Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/Tanu-panwar/Prime-React-Artworks-Table.git
+cd Prime-React-Artworks-Table
+
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+#Build for Production
+npm run build
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+📦 src/
+ ┣ 📂components/
+ ┃ ┣ 📄 TableView.tsx
+ ┃ ┗ 📄 TitleHeader.tsx
+ ┣ 📄 App.tsx
+ ┣ 📄 index.css
+ ┣ 📄 main.tsx
+ ┣ 📄 useArtworkData.ts
+ ┣ 📄 types.ts
